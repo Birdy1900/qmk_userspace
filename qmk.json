@@ -320,6 +320,22 @@
                 "HLC_NONE": "1",
                 "TARGET": "splitkb_halcyon_ferris_rev1_default_hlc"
             }
+        ],
+        [
+            "splitkb/halcyon/ferris/rev1",
+            "leon",
+            {
+                "HLC_TFT_DISPLAY": "1",
+                "TARGET": "ferris_tft"
+            }
+        ],
+        [
+            "splitkb/halcyon/ferris/rev1",
+            "leon",
+            {
+                "HLC_CIRQUE_TRACKPAD": "1",
+                "TARGET": "ferris_pad"
+            }
         ]
     ]
 }
