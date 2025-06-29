@@ -109,6 +109,8 @@ enum combos {
   DC_F6,
   HFV_DEL,
   AHF_TAB,
+  QTYP_RESET,
+
 
 
   //LHJ_ENT,
@@ -141,6 +143,7 @@ const uint16_t PROGMEM sx_combo[] = {KC_S, KC_X, COMBO_END};
 const uint16_t PROGMEM dc_combo[] = {KC_D, KC_C, COMBO_END};
 const uint16_t PROGMEM hfv_combo[] = {HRM_F, KC_V, COMBO_END};
 const uint16_t PROGMEM ahf_combo[] = {HRM_F, KC_A, COMBO_END};
+const uint16_t PROGMEM qtyp_combo[] = {KC_Q, KC_Y,KC_T, KC_P, COMBO_END};
 
 
 
@@ -168,6 +171,7 @@ combo_t key_combos[] = {
   [DC_F6] = COMBO(dc_combo, KC_F6),
   [HFV_DEL] = COMBO(hfv_combo, KC_DEL),
   [AHF_TAB] = COMBO(ahf_combo, KC_TAB),
+  [QTYP_RESET] = COMBO(qtyp_combo, RESET),
 };
 // Custom combo times
 
@@ -195,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
         KC_A,    KC_S,    KC_D,    HRM_F,   KC_G,        KC_H,    HRM_J,   KC_K,    KC_L,    KC_SCLN,
         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,        KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-                                   NVN_SPC, KC_BSPC,     KC_F8,   KC_F9,
+                                   NVN_SPC, KC_BSPC,     KC_F8,   NVN_F9,
 
         XXXXXXX,XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
@@ -228,7 +232,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_CNVN] = LAYOUT_ferris_hlc(
-        UNDO,   MAIL,     KC_UP,   XXXXXXX,RESET,        RESET,   KC_7,    KC_8,    KC_9,    SAVE,
+        UNDO,   MAIL,     KC_UP,   XXXXXXX,XXXXXXX,      XXXXXXX,   KC_7,    KC_8,    KC_9,    SAVE,
         SRCH,   KC_LEFT,  KC_DOWN, KC_RGHT,XXXXXXX,      XXXXXXX, HRM_4S,  KC_5,    KC_6,    KC_0,
         SELA,   CUT,      COPY,    PASTE,  XXXXXXX ,     XXXXXXX, KC_1,    KC_2,    KC_3,    PERC,
                                    KC_SPC, KC_BSPC,      XXXXXXX, KC_BSPC,
